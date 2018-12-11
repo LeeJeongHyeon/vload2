@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/s3_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/template_header_signup_header" />
+
+
+        <LinearLayout style="@style/SignupLinearLayoutOuter">
+
+            <Spinner
+                android:id="@+id/s3_1_select_bank"
+                style="@style/SignupEditText"
+                android:layout_marginBottom="4dp"
+                android:entries="@array/bank_name"
+                android:hint="입금할 은행명을 선택하세요." />
+
+            <!--s3_tv1-->
+            <EditText
+                android:id="@+id/s3_2_account_holder"
+                style="@style/SignupEditText3"
+                android:hint="예금주" />
+
+            <!--s3_tv2-->
+            <EditText
+                android:id="@+id/s3_3_account_number"
+                style="@style/SignupEditText3"
+                android:inputType="number"
+                android:hint="계좌번호 입력 (숫자만 입력)" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/s3_text_mailing_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="37.3sp"
+                    android:text="메일링 서비스"
+                    android:textColor="#848484"
+                    android:textSize="10sp" />
+
+                <!--s3_cb1-->
+                <CheckBox
+                    android:id="@+id/s3_4_accept_mailing_service"
+                    style="@style/SignupCheckBox"
+                    android:layout_toEndOf="@id/s3_text_mailing_service" />
+
+                <TextView
+                    android:text="정보 메일을 받겠습니다."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@id/s3_4_accept_mailing_service"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="39.3sp"
+                    android:textColor="#060202"
+                    android:textSize="7.3sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/s3_text_sms_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="37.3sp"
+                    android:text="SMS 수신여부"
+                    android:textColor="#848484"
+                    android:textSize="10sp" />
+
+                <!--s3_cb2-->
+                <CheckBox
+                    android:id="@+id/s3_5_accept_sms_service"
+                    style="@style/SignupCheckBox"
+                    android:layout_toEndOf="@id/s3_text_sms_service" />
+
+                <TextView
+                    android:text="휴대폰 문자메세지를 받겠습니다."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@id/s3_5_accept_sms_service"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="39.3sp"
+                    android:textColor="#060202"
+                    android:textSize="7.3sp" />
+            </RelativeLayout>
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="40dp"-->
+                <!--android:fontFamily="@font/nanumsquarer"-->
+                <!--android:letterSpacing="-0.02"-->
+                <!--android:lineSpacingExtra="38.7sp"-->
+                <!--android:text="아래 이미지를 보이는대로 입력해주세요."-->
+                <!--android:textColor="#434343"-->
+                <!--android:textSize="8sp"-->
+
+                <!--/>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:orientation="horizontal">-->
+                <!--&lt;!&ndash;s3_iv4&ndash;&gt;-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/s3_6_captcha_image"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:scaleType="fitXY" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/s3_7_captcha_refresh"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/border8"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:paddingRight="10dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="12dp"-->
+                        <!--android:layout_height="12dp"-->
+                        <!--android:layout_margin="6dp"-->
+                        <!--android:src="@drawable/refresh" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:fontFamily="@font/nanumsquarer"-->
+                        <!--android:text="새로고침"-->
+                        <!--android:textColor="#434343"-->
+                        <!--android:textSize="12sp" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+            <!--<EditText-->
+                <!--android:id="@+id/s3_7_captcha_input"-->
+                <!--style="@style/SignupEditText3"-->
+                <!--android:hint="자동입력 방지문자" />-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/s3_join"
+        style="@style/SignupSubmit"
+        android:text="회원가입 완료" />
+
+</RelativeLayout>

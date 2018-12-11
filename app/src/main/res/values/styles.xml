@@ -1,0 +1,168 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    //다이얼로그 없는 프로그래스바
+    <style name="NewDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="SignupHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/signup</item>
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:text">회원가입</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">21dp</item>
+    </style>
+
+    <style name="SignupLinearLayoutOuter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">16dp</item>
+        <item name="android:layout_margin">28dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ColumnHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@color/signup</item>
+        <item name="android:fontFamily">@font/nanumsquarer</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:lineSpacingExtra">34.7sp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+
+    <style name="SignupEditText" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textColor">#848484</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/nanumsquarer</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:lineSpacingExtra">34.7sp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:background">@drawable/signup_border2</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorPrimary">#848484</item>
+    </style>
+
+    <style name="SignupCheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/signup_checkbox</item>
+        <item name="android:scaleX">0.8</item>
+        <item name="android:scaleY">0.8</item>
+        <item name="android:layout_marginHorizontal">4dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="SignupTextviewNextToCheckbox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/nanumsquarer</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:lineSpacingExtra">38.7sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="SignupSubheader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#80c269</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:lineSpacingExtra">34.7sp</item>
+        <item name="android:fontFamily">@font/nanumsquarer</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+    </style>
+
+    <style name="SignupEditText2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:hint">""</item>
+        <item name="android:textColorHint">#80848484</item>
+        <item name="android:textColor">#80848484</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/nanumsquarer</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:lineSpacingExtra">34.7sp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:layout_marginVertical">5dp</item>
+        <item name="android:background">#dfdfdf</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="SignupEditText3" parent="SignupEditText">
+        <item name="android:layout_marginVertical">5dp</item>
+    </style>
+
+    <style name="SignupSubmit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">#dfdfdf</item>
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:lineSpacingExtra">30.7sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textSize">21dp</item>
+    </style>
+
+    <style name="Singup1AcceptTableElement">
+        <item name="android:layout_width">115dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/signup_border1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/nanumsquarer</item>
+        <item name="android:textColor">#80c269</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginHorizontal">1dp</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+
+    <style name="SignupRecommenderList">
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textColor">#848484</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:lineSpacingExtra">37.3sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

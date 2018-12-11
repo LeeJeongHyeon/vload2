@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginVertical="13dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17.3sp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.02"
+            android:fontFamily="@font/bmjua"
+            android:lineSpacingExtra="29.3sp"
+            android:textAlignment="center"
+            android:text="V로드 추천하기"/>
+        <ImageView
+            android:id="@+id/recommend_f_close_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="12.3dp"
+            android:src="@drawable/nav_cross_out" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_recommend_friend_bg"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dialog_recommend_friend_fg"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/recommend_f_kakao_tv"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:background="@color/recommendFriend"
+            android:fontFamily="@font/bmjua"
+            android:gravity="center"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="33.3sp"
+            android:text="친구에게 추천하기"
+            android:textColor="#ffffff"
+            android:textSize="13.3sp" />
+
+        <TextView
+            android:id="@+id/recommend_f_copy_url_tv"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@color/recommendFriend"
+            android:fontFamily="@font/bmjua"
+            android:gravity="center"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="33.3sp"
+            android:text="추천 URL 복사"
+            android:textColor="#ffffff"
+            android:textSize="13.3sp" />
+    </LinearLayout>
+</LinearLayout>

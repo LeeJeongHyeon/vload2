@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginLeft="15.3dp"
+    android:layout_marginRight="14.7dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79.3dp"
+        android:orientation="horizontal">
+
+        <!-- 매장 이미지 -->
+        <ImageView
+            android:id="@+id/f_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/icon" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="9.3dp">
+
+
+            <!-- 매장명-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/f_ll_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/f_company_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquareb"
+                        android:letterSpacing="-0.02"
+                        android:lineSpacingExtra="34.7sp"
+                        android:text="배스킨라빈스"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <!-- 업종-->
+                    <TextView
+                        android:id="@+id/f_industry_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/nanumsquarer"
+                        android:letterSpacing="-0.02"
+                        android:lineSpacingExtra="38.7sp"
+                        android:text="아이스크림"
+                        android:textColor="#918989"
+                        android:textSize="8sp" />
+                </LinearLayout>
+                <!-- 주소-->
+                <TextView
+                    android:id="@+id/f_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/f_ll_1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="6dp"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="38.7sp"
+                    android:text="서울 영등포구 대방천로 223 "
+                    android:textColor="#918989"
+                    android:textSize="8sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/f_vm_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="-0.02"
+                        android:lineSpacingExtra="38.7sp"
+                        android:text="VM혜택: 10000원 이상 주문 시  ㅇㅇㅇ추가"
+                        android:textColor="#4aacde"
+                        android:textSize="8sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="8.7dp"
+                            android:layout_height="8.7dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginHorizontal="2.7dp"
+                            android:background="@drawable/time" />
+
+                        <TextView
+                            android:id="@+id/f_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquarer"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="38.7sp"
+                            android:text="20분~35분"
+                            android:textColor="#000000"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cbcbcb" />
+    <TextView
+        android:id="@+id/f_unavailable_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="사용자 위치의 근처 매장이 없습니다."
+        android:visibility="gone" />
+</LinearLayout>

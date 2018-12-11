@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/s1_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/template_header_signup_header" />
+
+
+        <LinearLayout style="@style/SignupLinearLayoutOuter">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal">
+
+                <!-- TODO 라디오 커스터마이징-->
+                <CheckBox
+                    android:id="@+id/s1_cb1"
+                    style="@style/SignupCheckBox"
+                    android:scaleX="1"
+                    android:scaleY="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="37.3sp"
+                    android:text="전체 동의"
+                    android:textColor="#000000"
+                    android:textSize="12.3sp" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/ColumnHeader"
+                android:text="회원가입 약관"
+                android:textSize="15dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:letterSpacing="-0.02"
+                        android:text="@string/terms_of_service1"
+                        android:textColor="#595a5a"
+                        android:textSize="9.3sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:letterSpacing="-0.02"
+                        android:text="@string/terms_of_service2"
+                        android:textColor="#595a5a"
+                        android:textSize="9.3sp" />
+                    <!-- TODO 스크롤바 커스터마이징-->
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/s1_cb2"
+                    style="@style/SignupCheckBox" />
+
+                <TextView
+
+                    style="@style/SignupTextviewNextToCheckbox"
+                    android:text="회원가입 약관의 내용에 동의합니다." />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/signup_terms_col1"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    style="@style/ColumnHeader"
+                    android:text="목적"
+                    android:textAlignment="center"
+                    />
+
+
+                <TextView
+                    android:id="@+id/signup_terms_col2"
+                    style="@style/ColumnHeader"
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/signup_terms_col1"
+                    android:text="항목"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/signup_terms_col3"
+                    style="@style/ColumnHeader"
+                    android:layout_width="125dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="2dp"
+                    android:layout_toRightOf="@id/signup_terms_col2"
+                    android:text="보유 기간"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/signup_terms_col4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signup_terms_col2"
+                    android:layout_alignStart="@+id/signup_terms_col2"
+                    android:layout_alignLeft="@id/signup_terms_col3"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginTop="-27dp"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:text="이용자 식별 및 본인 여부 확인 "
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signup_terms_col1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="50dp"
+                    android:paddingStart="8dp"
+                    android:text="개인 정보 처리\n방침 안내"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/signup_terms_col5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signup_terms_col4"
+                    android:layout_alignLeft="@id/signup_terms_col2">
+
+                    <TextView
+                        style="@style/Singup1AcceptTableElement"
+                        android:text="아이디, 이름, 비밀번호" />
+                    <TextView
+                        style="@style/Singup1AcceptTableElement"
+                        android:text="회원 탈퇴 시까지" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/signup_terms_col6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signup_terms_col5"
+                    android:layout_alignStart="@id/signup_terms_col2"
+                    android:layout_alignLeft="@id/signup_terms_col3"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="-83dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:text="고객 서비스 이용에 관한 통지\nCS대응을 위한 이용한 식별"
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signup_terms_col1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="50dp"
+                    android:paddingStart="8dp"
+                    android:text="개인 정보 처리\n방침 안내"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signup_terms_col6"
+                    android:layout_alignLeft="@id/signup_terms_col2">
+                    <TextView
+                        style="@style/Singup1AcceptTableElement"
+                        android:text="연락처(이메일, 휴대전화\n번호)" />
+
+                    <TextView
+                        style="@style/Singup1AcceptTableElement"
+                        android:text="회원 탈퇴 시까지" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <!--TODO 라디오 커스터마이징-->
+                <CheckBox
+                    android:id="@+id/s1_cb3"
+                    style="@style/SignupCheckBox" />
+
+                <TextView
+                    style="@style/SignupTextviewNextToCheckbox"
+                    android:text="개인정보처리방침안내 내용에 동의합니다." />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/s1_join"
+        style="@style/SignupSubmit"
+        android:text="정보 입력하기" />
+</RelativeLayout>

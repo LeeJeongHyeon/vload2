@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "204779667657",
+    "firebase_url": "https://vexmall-eb513.firebaseio.com",
+    "project_id": "vexmall-eb513",
+    "storage_bucket": "vexmall-eb513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204779667657:android:abdcbb7282632706",
+        "android_client_info": {
+          "package_name": "vmp.company.vexmall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204779667657-pfefs269tq25htop90s1opfqb8ea4vea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vmp.company.vexmall",
+            "certificate_hash": "9c103539d3a68304b69c5cba108a9a47f20db1ae"
+          }
+        },
+        {
+          "client_id": "204779667657-7v7rpva9kdcfik96keoa71983i69r95k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbUh4zAQb4PvHK0p95lkhEN-Qr0HUduyI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204779667657-7v7rpva9kdcfik96keoa71983i69r95k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

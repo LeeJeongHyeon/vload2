@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#354d90</color>
+    <color name="openingTop">#330867</color>
+    <color name="login">#30cfd0</color>
+    <color name="colorPrimaryDark">#FFF</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffff</color>
+    <color name="addpack">#77a0d4</color>
+    <color name="settings">#cc4635</color>
+    <color name="signup">#80c269</color>
+    <color name="disabled">#dfdfdf</color>
+    <color name="recommendFriend">#3b6aaa</color>
+    <color name="vendormap">#4aacde</color>
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:id="@+id/settings1_layout"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f6f6f6">
+    <RelativeLayout
+        android:id="@+id/s1_header_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/setting_title"
+            style="@style/SignupHeader"
+            android:background="@color/settings"
+            android:text="설정" />
+
+        <FrameLayout
+            android:id="@+id/s1_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:layout_width="10dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/header_left_arrow" />
+        </FrameLayout>
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/s1_header_rl"
+    android:layout_marginVertical="19dp">
+    <TextView
+       style="@style/SettingColumnHeader"
+        android:text="벤더맵"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/settings1_goto_vendormap_tv"
+        style="@style/SettingHeader"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:layout_marginVertical="6dp"
+        android:text="벤더맵 설정하기"/>
+        <FrameLayout
+            android:id="@+id/s1_goto_s2_fl"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:scaleX="-1"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:layout_width="10dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/header_left_arrow" />
+        </FrameLayout>
+    </RelativeLayout>
+    <TextView
+        style="@style/SettingColumnHeader"
+        android:text="회사 소개" />
+    <LinearLayout
+        style="@style/SettingsInformationLayout">
+        <TextView
+            style="@style/SettingsInformationHeader"
+            android:text="상호" />
+        <TextView
+            android:id="@+id/settings1_col1_business_tv"
+            style="@style/SettingsInformationData"
+            android:text="@string/company" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/SettingsInformationLayout">
+        <TextView
+            style="@style/SettingsInformationHeader"
+            android:text="대표" />
+        <TextView
+            android:id="@+id/settings1_col2_founder"
+            style="@style/SettingsInformationData"
+            android:text="@string/founder" /> />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/SettingsInformationLayout">
+        <TextView
+            style="@style/SettingsInformationHeader"
+            android:text="사업자등록번호"/>
+        <TextView
+            android:id="@+id/settings1_col3_business_no"
+            style="@style/SettingsInformationData"
+            android:text="@string/business_number" />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/SettingsInformationLayout">
+        <TextView
+
+            style="@style/SettingsInformationHeader"
+            android:text="주소" />
+        <TextView
+            android:id="@+id/settings1_col4_address"
+            style="@style/SettingsInformationData"
+            android:text="@string/business_address"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/SettingsInformationLayout">
+        <TextView
+
+            style="@style/SettingsInformationHeader"
+            android:text="카카오톡 플러스 친구" />
+        <TextView
+            android:id="@+id/settings1_col5_kakao_plus"
+            style="@style/SettingsInformationData"
+            android:text="@string/business_kakao" />
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

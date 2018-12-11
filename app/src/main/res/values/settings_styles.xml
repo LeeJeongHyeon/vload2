@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SettingHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">@color/settings</item>
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:listPreferredItemPaddingEnd">30.7sp</item>
+        <item name="android:text">설정</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">21dp</item>
+    </style>
+
+    <style name="SettingColumnHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginHorizontal">@dimen/fab_margin3</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:lineSpacingExtra">34.7sp</item>
+        <item name="android:text">설정</item>
+    </style>
+
+    <style name="SettingsInformationLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginVertical">6dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="SettingsInformationHeader">
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingHorizontal">@dimen/fab_margin3</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:textColor">#9e9ea2</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="SettingsInformationData">
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingHorizontal">@dimen/fab_margin3</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingVertical">2dp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:lineSpacingExtra">34.7sp</item>
+    </style>
+
+    <style name="Settings2DataLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">33.3dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginVertical">1.5dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="Settings2DataTextView">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:lineSpacingExtra">33.3sp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">13.3sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="Settings2DataEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginVertical">6dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:background">@drawable/settings_border1</item>
+        <item name="android:fontFamily">@font/bmjua</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:paddingHorizontal">8.7dp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">9.3sp</item>
+    </style>
+    <style name="Settings2BarView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">@dimen/fab_margin3</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">#a0a0a0</item>
+    </style>
+</resources>

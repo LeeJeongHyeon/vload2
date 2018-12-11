@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+       android:layout_width="110.7dp"
+       android:layout_height="160.7dp"
+       android:orientation="vertical"
+       android:paddingHorizontal="5.3dp"
+       android:paddingTop = "6.7dp">
+       <ImageView
+           android:id="@+id/f_iv"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_gravity="center_horizontal"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="7.3dp"
+           android:orientation="horizontal">
+           <TextView
+               android:id="@+id/f_index_tv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="16sp"
+               android:textColor="#336699"
+               android:letterSpacing="-0.02"
+               android:gravity="center_horizontal"
+               android:fontFamily="@font/bmjua"
+               android:text="0."
+               />
+           <TextView
+               android:id="@+id/f_company_name_tv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="12sp"
+               android:textColor="#666666"
+               android:letterSpacing="-0.02"
+               android:gravity="center_horizontal"
+               android:layout_marginLeft="6dp"
+               android:text="상호명1"
+               />
+       </LinearLayout>
+       <TextView
+           android:id="@+id/f_addr1_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="6.7sp"
+           android:textColor="#999999"
+           android:letterSpacing="-0.02"
+           android:gravity="center_horizontal"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginBottom="6dp"
+           android:text="주소 영역입니다."
+           />
+\
+       <TextView
+           android:id="@+id/f_vm_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="5.3sp"
+           android:textColor="#4aacde"
+           android:letterSpacing="-0.02"
+           android:gravity="center_horizontal"
+           android:text="VM혜택: null"
+           android:layout_gravity="center_horizontal"
+           />
+
+
+
+   </LinearLayout>
+
+</FrameLayout>

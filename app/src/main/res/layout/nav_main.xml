@@ -1,0 +1,662 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/nav_root_view"
+    tools:context=".navigation.NavActivity">
+
+    <RelativeLayout
+        android:id="@+id/nav_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12.3dp">
+
+        <RelativeLayout
+            android:id="@+id/loginedLayout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border6"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/nav_login_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvIdTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/bmjua"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="57sp"
+                    android:text="반갑습니다."
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="89dp"
+                    android:layout_height="85dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/nav_user" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/bmjua"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="57sp"
+                    android:text="NULL"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nav_login_info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border7"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp">
+
+                <!-- v coin -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/v_coin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/bmjua"
+                        android:letterSpacing="-0.02"
+                        android:lineSpacingExtra="58sp"
+                        android:text="V coin"
+                        android:textColor="#fff"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvVcoin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/bmjua"
+                        android:letterSpacing="-0.02"
+                        android:lineSpacingExtra="58sp"
+                        android:text=""
+                        android:textColor="#fff"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- vmc, vmp -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-5dp"
+                        android:background="@drawable/p_coin" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/bmjua"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="58sp"
+                            android:text="VCash"
+                            android:textColor="#fff"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-10dp"
+                            android:fontFamily="@font/bmjua"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="58sp"
+                            android:text="VPay"
+                            android:textColor="#fff"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvVmc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/bmjua"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="58sp"
+                            android:text="NULL"
+                            android:textColor="#fff"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvVmp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/bmjua"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="58sp"
+                            android:text="NULL"
+                            android:textColor="#fff"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/nav_setting"
+            android:layout_width="20.3dp"
+            android:layout_height="20.3dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/nav_cogwheel_outline" />
+
+        <ImageView
+            android:id="@+id/nav_close"
+            android:layout_width="18.3dp"
+            android:layout_height="18.3dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:src="@drawable/nav_cross_out" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/joinLayout">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/nav_logo1" />
+
+            <TextView
+                android:id="@+id/nav_welcome"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bmjua"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#666666"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/nav_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/nav_login"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/nav_border"
+                    android:fontFamily="@font/bmjua"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="#374262"
+                    android:textSize="13sp"
+                    android:text="로그인" />
+                <TextView
+                    android:id="@+id/nav_join"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/nav_border"
+                    android:fontFamily="@font/bmjua"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="#374262"
+                    android:textSize="13sp"
+                    android:text="회원가입" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/nav_menus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        android:paddingHorizontal="50dp">
+
+        <!-- 푸시 알림 및 메시지 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nav_menu_1_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/fab_margin">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/fab_margin">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nav_menu_1_alarm" />
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/notify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/bmjua"
+                    android:text="푸시 알람 및 메시지"
+                    android:textAlignment="viewStart"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="1dp"
+                android:background="#666666" />
+        </LinearLayout>
+
+
+        <!-- 좋아요 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nav_menu_2_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/fab_margin">
+
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/fab_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nav_menu_2_like" />
+                </FrameLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/bmjua"
+                    android:text="좋아요"
+                    android:textAlignment="viewStart"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="1dp"
+                android:background="#666666" />
+        </LinearLayout>
+
+        <!--애드팩 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nav_menu_3_advertising"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/fab_margin">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/fab_margin">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nav_menu_3_advertising" />
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/addpack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/bmjua"
+                    android:text="애드팩"
+                    android:textAlignment="viewStart"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="1dp"
+                android:background="#666666" />
+
+        </LinearLayout>
+
+        <!-- 직접 추천 관리 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nav_menu_4_meeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/fab_margin">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/fab_margin">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nav_menu_4_meeting" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/bmjua"
+                    android:text="직접 추천 관리"
+                    android:textAlignment="viewStart"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="1dp"
+                android:background="#666666" />
+
+        </LinearLayout>
+
+        <!--V로드 추천하기-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nav_menu_5_teamwork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/fab_margin">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/fab_margin">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nav_menu_5_teamwork" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/bmjua"
+                    android:text="V로드 추천하기"
+                    android:textAlignment="viewStart"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="1dp"
+                android:background="#666666" />
+
+        </LinearLayout>
+        <!--마이 오피스-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nav_menu_6_my"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/fab_margin">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/fab_margin">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nav_menu_6_my" />
+                </FrameLayout>
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/bmjua"
+                    android:text="마이 오피스"
+                    android:textAlignment="viewStart"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="1dp"
+                android:background="#666666" />
+
+        </LinearLayout>
+        <!--VIP 전용관-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nav_menu_7_crown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/fab_margin">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/fab_margin">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nav_menu_7_crown" />
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/nav_menu_7_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/bmjua"
+                    android:text="VIP 전용관"
+                    android:textAlignment="viewStart"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="1dp"
+                android:background="#666666" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_qna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nav_logout"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@drawable/nav_border"
+                android:fontFamily="@font/bmjua"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:textColor="#383b65"
+                android:textSize="13sp"
+                android:visibility="gone"
+                android:text="로그아웃" />
+
+            <TextView
+                android:id="@+id/txt_notice"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:background="@drawable/nav_border"
+                android:fontFamily="@font/bmjua"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="고객센터"
+                android:textColor="#374262"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </GridLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/nav_menus"
+        android:layout_marginHorizontal="25dp"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="41dp"
+
+        android:src="@drawable/nav_logo2" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp" />
+</RelativeLayout>

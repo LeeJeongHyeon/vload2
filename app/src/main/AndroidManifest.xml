@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vmp.company.vexmall">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.igaworks.IgawDefaultApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="vmp.company.vexmall.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- <data android:host="vexmall.page.link" android:scheme="https"/> -->
+                <data
+                    android:host="vmp.company/vexMall/back/redirect.php"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".addpack.AddpackLaunchActivity" />
+        <activity
+            android:name="com.kyad.adlibrary.AppAllOfferwallActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="AppAllOfferwall" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.OpeningActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".signup.SignupActivity" />
+        <activity android:name=".signup.SignupActivity2" />
+        <activity android:name=".signup.SignupActivity3" />
+        <activity android:name=".navigation.NavActivity" />
+        <activity android:name=".navigation.FindIdActivity" />
+        <activity android:name=".addpack.Addpack_Activity" />
+        <activity android:name=".setting.SettingsActivity" />
+        <activity android:name=".setting.SettingsActivity2" />
+        <activity android:name=".vendormap.VendormapAcitivity" />
+
+        <meta-data
+            android:name="tnkad_app_id"
+            android:value="304020e0-90d1-2636-6362-1d09080b0a03" />
+        //애드팝콘
+        <meta-data
+            android:name="igaworks_app_key"
+            android:value="623141981" />
+        <meta-data
+            android:name="igaworks_hash_key"
+            android:value="59f97f74877246b7" />
+        //앱드팝콘 엑티비티 추가
+        <activity
+            android:name="com.igaworks.adpopcorn.activity.ApOfferWallActivity_NT"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.igaworks.adpopcorn.activity.ApVideoAdActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        //수정 - 나중에 애드팝콘 리워드 서버 변경시 server -> client로 변경
+        <meta-data
+            android:name="igaworks_reward_server_type"
+            android:value="client" />
+        <meta-data
+            android:name="tnkad_app_id"
+            android:value="304020e0-90d1-2636-6362-1d09080b0a03" />
+        //nas 메타 데이터 설정
+        <meta-data
+            android:name="naswall_app_key"
+            android:value="eb4096d722bc5cf51661f2331b9e6f1e" />
+        //nas 액티비티 설정
+        <activity
+            android:name="com.nextapps.naswall.NASWallBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        //tnk ad 메타데이터 설정
+        <meta-data
+            android:name="tnkad_app_id"
+            android:value="304020e0-90d1-2636-6362-1d09080b0a03" />
+        //tnk ad activity 추가
+        <activity android:name="com.tnkfactory.ad.AdWallActivity" />
+        <activity
+            android:name="com.tnkfactory.ad.AdMediaActivity"
+            android:screenOrientation="landscape" />
+        //adsync activity 추가
+        <activity
+            android:name="com.fpang.lib.AdSyncList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.AdSync" />
+        <activity
+            android:name="com.fpang.lib.FreePangPang"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.AdSync" />
+        <activity android:name=".navigation.LoginActivity" />
+        //adsync 메타데이터 설정
+        <meta-data
+            android:name="partner_id"
+            android:value="01708-20181029-652" />
+        <meta-data
+            android:name="title_bar_color"
+            android:value="#e2e2e2" />
+        //다음 카카오맵
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="L0U1D8Iy9y4oo7fmp+t9XpfDmqk=×" />
+
+        <activity android:name=".vendormap.GpsActivity"></activity>
+    </application>
+
+</manifest>

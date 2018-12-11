@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/s2_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/template_header_signup_header" />
+
+        <ScrollView
+
+            android:id="@+id/s2_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/SignupLinearLayoutOuter"
+                android:paddingBottom="300dp">
+                <!-- 비밀번호 텍스트뷰 : s2_tv1, s2_tv2(비번확인)-->
+                <EditText
+                    android:id="@+id/s2_1_password"
+                    android:hint="비밀번호"
+                    android:inputType="textPassword"
+                    style="@style/SignupEditText"
+                    />
+
+
+                <EditText
+                    android:id="@+id/s2_2_repassword"
+                    style="@style/SignupEditText"
+                    android:layout_marginTop="-2dp"
+                    android:hint="비밀번호 확인"
+                    android:inputType="textPassword"/>
+
+
+                <!--android:id="@+id/s2_tv3"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="38.7sp"
+                    android:text="* 영문자, 숫자, _ 만 입력 가능, 최소 3자 이상"
+                    android:textColor="#848484"
+                    android:textSize="8sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- android:id="@+id/s2_tv4" -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="@font/nanumsquarer"
+                        android:letterSpacing="-0.02"
+                        android:lineSpacingExtra="34.7sp"
+                        android:text="계정 종류"
+                        android:textColor="#000000"
+
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/s2_3_is_cu"
+                            style="@style/SignupCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/SignupTextviewNextToCheckbox"
+                            android:text="일반" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/s2_4_is_vd"
+                            style="@style/SignupCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/SignupTextviewNextToCheckbox"
+                            android:text="판매자" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/s2_tv8"
+                    style="@style/SignupSubheader"
+                    android:text="추천인 정보 입력(필수 입력 사항)" />
+                <!-- '추천인 없음' 기능 활성화 되면 주석 해제해서 사용하세요.
+                <LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginVertical="4dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<CheckBox-->
+                        <!--android:id="@+id/s2_5_have_no_recommender"-->
+                        <!--style="@style/SignupCheckBox"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                    <!--<TextView-->
+                        <!--style="@style/SignupTextviewNextToCheckbox"-->
+                        <!--android:text="추천인이 없습니다." />-->
+
+                <!--</LinearLayout>-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/s2_6_search_recommender_text"
+                        style="@style/SignupEditText"
+                        android:layout_width="250dp"
+                        android:layout_centerVertical="true"
+                        android:hint="회원 검색(이름 or 아이디 or 이메일)" />
+
+                    <Button
+                        android:id="@+id/s2_7_search_recommender"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="13dp"
+                        android:layout_marginRight="13dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_toEndOf="@id/s2_6_search_recommender_text"
+                        android:background="@drawable/signup_search" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/s2_8_recommender_name"
+                    style="@style/SignupEditText2"
+                    android:clickable="false"
+                    android:hint="추천인 이름" />
+
+                <EditText
+                    android:id="@+id/s2_9_recommender_email"
+                    style="@style/SignupEditText2"
+                    android:clickable="false"
+                    android:hint="추천인 이메일" />
+
+                <EditText
+                    android:id="@+id/s2_10_recommender_id"
+                    style="@style/SignupEditText2"
+                    android:clickable="false"
+                    android:hint="추천인 아이디" />
+
+
+                <TextView
+                    style="@style/SignupSubheader"
+                    android:text="개인 정보 입력" />
+
+
+                <EditText
+                    android:id="@+id/s2_11_name"
+                    style="@style/SignupEditText3"
+                    android:hint="이름" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/s2_12_contact"
+                    style="@style/SignupEditText3"
+                    android:layout_width="200dp"
+                    android:hint="휴대폰 번호"
+                    android:inputType="number" />
+
+                 <TextView
+                     android:id="@+id/s2_12_2_sending_auth_num_tv"
+                     style="@style/SignupEditText3"
+                     android:text="인증번호 전송"
+                     android:fontFamily="@font/bmjua"
+                     android:layout_marginLeft="8dp"
+                     android:layout_gravity="center_vertical"
+                     android:gravity="center"
+                     android:textColor="@color/white"
+                     android:background="#80c269"
+                     android:layout_toEndOf="@id/s2_12_contact"/>
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/s2_13_email"
+                    style="@style/SignupEditText3"
+                    android:hint="이메일" />
+
+                <EditText
+                    android:id="@+id/s2_14_birth"
+                    style="@style/SignupEditText3"
+                    android:hint="법정생년월일 6자리"
+                    android:inputType="number" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/s2_15_zipcode"
+                        style="@style/SignupEditText3"
+                        android:layout_width="130dp"
+                        android:hint="우편번호"
+                        android:inputType="number" />
+
+                    <Button
+                        android:id="@+id/s2_16_search_zipcode"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="13dp"
+                        android:layout_toEndOf="@id/s2_15_zipcode"
+                        android:background="@drawable/signup_search2" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/s2_17_address1"
+                    style="@style/SignupEditText3"
+                    android:hint="주소" />
+
+                <EditText
+                    android:id="@+id/s2_18_address2"
+                    style="@style/SignupEditText3"
+                    android:layout_marginBottom="200dp"
+                    android:hint="상세 주소" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/s2_join"
+        style="@style/SignupSubmit"
+        android:text="계좌 등록하기" />
+</RelativeLayout>

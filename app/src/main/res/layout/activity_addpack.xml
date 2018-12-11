@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addpack_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/addpack"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/main_bar_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/main_bar_1"
+                android:layout_width="24dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="12dp"
+                android:src="@drawable/main_bar_2" />
+
+            <TextView
+                android:id="@+id/main_bar_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/main_bar_1"
+                android:fontFamily="@font/bmjua"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="25.3sp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#ffffff"
+                android:textSize="21.3sp"
+                android:text="V로드" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#77a0d4"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#f1f1f1"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/addpack_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_main" />
+
+</android.support.v4.widget.DrawerLayout>

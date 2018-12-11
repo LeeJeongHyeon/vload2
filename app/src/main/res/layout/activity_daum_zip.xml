@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_zip_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/fab_margin3"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".signup.DaumZipDialog">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/signup_border1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/daum_zip_header"
+        style="@style/ColumnHeader"
+        android:text="우편번호 검색"
+        android:textAlignment="center"
+        android:fontFamily="@font/bmjua"
+        android:textSize="15dp" />
+
+    <WebView
+        android:id="@+id/daum_zip_webview"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+
+        android:layout_weight="4" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

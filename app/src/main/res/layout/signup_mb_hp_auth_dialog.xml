@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    style="@style/SignupLinearLayoutOuter"
+    android:background="@drawable/signup_border1">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/signup_title"
+        style="@style/SignupHeader"
+        android:text="문자 인증"/>
+        <!--<ImageView-->
+            <!--android:id="@+id/nav_close"-->
+            <!--android:layout_width="18.3dp"-->
+            <!--android:layout_height="18.3dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:src="@drawable/nav_cross_out" />-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/s2_auth_outer_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/fab_margin3"
+       android:visibility="gone"
+        >
+        <TextView
+        android:id="@+id/s2_auth_step2_message_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquarer"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="38.7sp"
+        android:layout_gravity="left"
+        android:textColor="#434343"
+        android:textSize="8sp"
+        />
+        <TextView
+            android:id="@+id/s2_auth_step2_message2_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquarer"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="38.7sp"
+            android:layout_gravity="left"
+            android:textColor="#434343"
+            android:textSize="8sp"
+            />
+        <EditText
+            android:id="@+id/s2_auth_num_input_et"
+            style="@style/SignupEditText3"
+            android:layout_height="64dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/fab_margin3"
+            android:hint="XXXX" />
+        <TextView
+            android:id="@+id/s2_auth_sending_final_tv"
+            style="@style/SignupEditText3"
+            android:text="남은 정보 입력하기"
+            android:fontFamily="@font/bmjua"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/disabled"
+            android:layout_toEndOf="@id/s2_12_contact"/>
+    </LinearLayout>
+
+
+<LinearLayout
+    android:id="@+id/s2_auth_outer_ll1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin3"
+    >
+    <TextView
+        android:id="@+id/s2_auth_mb_hp_tv"
+        style="@style/SignupEditText2"
+        android:clickable="false"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquarer"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="38.7sp"
+        android:layout_gravity="left"
+        android:text="아래 이미지를 보이는대로 입력해주세요."
+        android:textColor="#434343"
+        android:textSize="8sp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <!--s3_iv4-->
+        <ImageView
+            android:id="@+id/s2_auth_captcha_iv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/s2_auth_captcha_refresh_ll"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="6dp"
+                android:src="@drawable/refresh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="새로고침"
+                android:textColor="#434343"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/s2_auth_captcha_input_et"
+        style="@style/SignupEditText3"
+        android:hint="자동입력 방지문자" />
+    <TextView
+        android:id="@+id/s2_auth_sending_tv"
+        style="@style/SignupEditText3"
+        android:text="인증번호 전송"
+        android:fontFamily="@font/bmjua"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/disabled"
+        android:layout_toEndOf="@id/s2_12_contact"/>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/vendormap_1_frag1_fl"
+    tools:context=".vendormap.VendormapFrag1">
+    <LinearLayout
+        android:id="@+id/main_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context=".vendormap.VendormapAcitivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/vendormap_1_mapview_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+            <HorizontalScrollView
+                android:id="@+id/vendormap_1_hsv"
+                android:layout_width="wrap_content"
+                android:layout_height="160.7dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5.3dp"
+                android:layout_marginBottom="27.3dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vendormap_1_hsv_ll">
+
+               <FrameLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/vendormap_1_hsv_item_fl"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
+<!--
+    fragment가 안보이는 거 같당 ㅠ
+
+-->
