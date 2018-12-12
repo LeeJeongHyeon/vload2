@@ -142,7 +142,8 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="L0U1D8Iy9y4oo7fmp+t9XpfDmqk=×" />
 
-        <activity android:name=".vendormap.GpsActivity"></activity>
+        <activity android:name=".vendormap.GpsActivity" />
+        <activity android:name=".shoplist.ShopListActivity" />
     </application>
 
 </manifest>

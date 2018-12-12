@@ -12,4 +12,19 @@
     <color name="disabled">#dfdfdf</color>
     <color name="recommendFriend">#3b6aaa</color>
     <color name="vendormap">#4aacde</color>
+
+
+
+    <color name="soft_green">#80c269</color>
+    <color name="denim_blue">#354d90</color>
+    <color name="french_blue">#415dad</color>
+    <color name="light_navy_blue">#2e4584</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="flat_blue">#3b6aaa</color>
+    <color name="black">#000000</color>
+    <color name="reddish">#cc4635</color>
+    <color name="cool_grey">#9e9ea2</color>
+    <color name="brownish_grey">#666666</color>
+    <color name="warm_grey">#999999</color>
+    <color name="dark_sky_blue">#4aacde</color>
 </resources>
