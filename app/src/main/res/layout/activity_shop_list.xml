@@ -1,9 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".shoplist.ShopListActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/shop_top_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/denim_blue">
+            <ImageView
+                android:id="@+id/shop_top_nav"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/vroad_shop_menu"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:paddingStart="6dp"
+                android:paddingEnd="20dp"/>
+            <TextView
+                android:id="@+id/shop_top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="21dp"
+                android:layout_toRightOf="@id/shop_top_nav"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bmjua"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/vroad_shop_heart"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="6dp"
+                android:paddingStart="6dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/shop_top_heart"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/vroad_shop_search"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/shop_top_heart"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:id="@+id/shop_top_search"
+                />
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/shop_category_ll"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/shop_top_toolbar"
+            android:weightSum="6"
+            android:orientation="horizontal">
+            <RelativeLayout
+                style="@style/shop_cat_btns"
+                android:id="@+id/shop_cat_all_rl">
+                <ImageView
+                    style="@style/shop_cat_btn_img"
+                    android:id="@+id/shop_cat_allimg"
+                    android:src="@drawable/shopping_bag"/>
+                <TextView
+                    style="@style/shop_cat_btn_text"
+                    android:layout_below="@id/shop_cat_allimg"
+                    android:text="전체 카테고리"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/shop_cat_btns"
+                android:id="@+id/shop_cat_passion_rl">
+                <ImageView
+                    style="@style/shop_cat_btn_img"
+                    android:id="@+id/shop_cat_passionimg"
+                    android:src="@drawable/vroad_shop_list_fashion"/>
+                <TextView
+                    style="@style/shop_cat_btn_text"
+                    android:layout_below="@id/shop_cat_passionimg"
+                    android:text="패션ㆍ잡화ㆍ뷰티"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/shop_cat_btns"
+                android:id="@+id/shop_cat_food_rl">
+                <ImageView
+                    style="@style/shop_cat_btn_img"
+                    android:id="@+id/shop_cat_foodimg"
+                    android:src="@drawable/vroad_shop_list_food"/>
+                <TextView
+                    style="@style/shop_cat_btn_text"
+                    android:layout_below="@id/shop_cat_foodimg"
+                    android:text="식품ㆍ출산ㆍ육아"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/shop_cat_btns"
+                android:id="@+id/shop_cat_living_rl">
+                <ImageView
+                    style="@style/shop_cat_btn_img"
+                    android:id="@+id/shop_cat_livingimg"
+                    android:src="@drawable/vroad_shop_list_living"/>
+                <TextView
+                    style="@style/shop_cat_btn_text"
+                    android:layout_below="@id/shop_cat_livingimg"
+                    android:text="생활ㆍ건강ㆍ리빙"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/shop_cat_btns"
+                android:id="@+id/shop_cat_digital_rl">
+                <ImageView
+                    style="@style/shop_cat_btn_img"
+                    android:id="@+id/shop_cat_digitalimg"
+                    android:src="@drawable/vroad_shop_list_digital"/>
+                <TextView
+                    style="@style/shop_cat_btn_text"
+                    android:layout_below="@id/shop_cat_digitalimg"
+                    android:text="디지털ㆍ가전ㆍ핸드폰"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/shop_cat_btns"
+                android:id="@+id/shop_cat_sport_rl">
+                <ImageView
+                    style="@style/shop_cat_btn_img"
+                    android:id="@+id/shop_cat_sportimg"
+                    android:src="@drawable/vroad_shop_list_sport"/>
+                <TextView
+                    style="@style/shop_cat_btn_text"
+                    android:layout_below="@id/shop_cat_sportimg"
+                    android:text="스포츠ㆍ취미ㆍ자동차"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/main_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_main" />
+
+
+</android.support.v4.widget.DrawerLayout>

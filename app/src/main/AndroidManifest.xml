@@ -63,11 +63,11 @@
         <activity
             android:name=".main.OpeningActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".signup.SignupActivity" />
         <activity android:name=".signup.SignupActivity2" />
@@ -143,7 +143,13 @@
             android:value="L0U1D8Iy9y4oo7fmp+t9XpfDmqk=×" />
 
         <activity android:name=".vendormap.GpsActivity" />
-        <activity android:name=".shoplist.ShopListActivity" />
+        <activity android:name=".shoplist.ShopListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
