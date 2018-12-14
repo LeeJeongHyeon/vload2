@@ -100,5 +100,8 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
 
     implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+
+    // Marty's BaseAPP
+    implementation 'com.github.kimbh0905:BaseAPP:1.0.03'
 }
 apply plugin: 'com.google.gms.google-services'

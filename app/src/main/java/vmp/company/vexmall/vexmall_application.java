@@ -25,6 +25,9 @@ public class vexmall_application extends Application {
 
         return retrofit;
     }
+    vexmall_application getAPP(){
+        return this;
+    }
     @Override
     public void onCreate(){
         super.onCreate();
