@@ -249,6 +249,7 @@ public class GpsActivity extends AppCompatActivity implements Parcelable {
 
                             // Vendormap 실행
                             startActivity(intent);
+                            finish();
                         } catch (Exception e) {
                             e.printStackTrace();
                             Log.i(TAG, "err:" + e.getMessage());

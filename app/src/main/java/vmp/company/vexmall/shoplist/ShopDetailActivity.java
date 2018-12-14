@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ import vmp.company.vexmall.shoplist.callback.OnTabSelectedListener;
  * Date      : 2018-12-12 / 오후 4:11
  * Comment   :
  */
-public class ShopDetailActivity extends AppCompatActivity implements OnTabSelectedListener {
+public class ShopDetailActivity extends AppCompatActivity implements OnTabSelectedListener,View.OnClickListener {
     @BindView(R.id.item_top_image)
     ImageView itemTopImage;
     @BindView(R.id.item_top_bar)
@@ -75,6 +76,8 @@ public class ShopDetailActivity extends AppCompatActivity implements OnTabSelect
     ViewPager itemDetailVp;
     @BindView(R.id.item_detail_scrollv)
     NestedScrollView itemDetailScrollv;
+    @BindView(R.id.item_scrollup_btn)
+    ImageView itemScrollupBtn;
 
 
     @Override
@@ -108,6 +111,20 @@ public class ShopDetailActivity extends AppCompatActivity implements OnTabSelect
         itemDetailVp.setAdapter(new ItemTabAdapter(getSupportFragmentManager(), itemTabL.getTabCount()));
         itemDetailVp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(itemTabL));
         itemTabL.addOnTabSelectedListener(this);
+
+        itemScrollupBtn.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.item_scrollup_btn:
+                itemDetailScrollv.fullScroll(View.FOCUS_UP);
+                itemDetailScrollv.scrollTo(0,0);
+                itemAppbar.setExpanded(true);
+                break;
+        }
     }
 
     @Override

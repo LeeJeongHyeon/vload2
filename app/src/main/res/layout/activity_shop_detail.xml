@@ -90,6 +90,10 @@
         android:id="@+id/item_detail_scrollv"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -266,6 +270,16 @@
             </RelativeLayout>
 
         </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/item_scrollup_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/item_scrollup_btn"/>
+        </RelativeLayout>
 
     </android.support.v4.widget.NestedScrollView>
 

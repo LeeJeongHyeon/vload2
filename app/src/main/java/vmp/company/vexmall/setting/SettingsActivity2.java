@@ -414,7 +414,6 @@ public class SettingsActivity2 extends AppCompatActivity implements Runnable {
                     Toast.makeText(SettingsActivity2.this, message, Toast.LENGTH_SHORT).show();
                     converter.deleteTempDir();
                 }
-
             }
 
             @Override
