@@ -6,26 +6,117 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".shoplist.tab_fragments.Item_Tabfrag_QA">
-    <RelativeLayout
-        android:layout_marginEnd="35dp"
-        android:layout_marginStart="35dp"
-        android:id="@+id/item_qa_title"
-        android:layout_marginTop="20dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/rect_blue_border" >
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="상품 문의하기"
-            android:textSize="13dp"
-            android:fontFamily="@font/nanumsquareb"
-            android:textColor="@color/denim_blue"
-            android:drawableStart="@drawable/qa_question_icon"
-            android:drawablePadding="5dp"/>
-    </RelativeLayout>
+            android:orientation="vertical"
+            android:id="@+id/item_qa_ll">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="상품문의"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:id="@+id/item_qa_qtitle"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 23개"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@id/item_qa_qtitle"
+                    android:textSize="6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/item_qa_qcnt"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀글로 문의하기"
+                    android:textSize="9dp"
+                    android:checked="true"
+                    android:button="@drawable/vroad_item_qa_checkbox"
+                    android:id="@+id/item_qa_secret_cb"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/item_qa_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="5"
+                android:inputType="textMultiLine"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/pinkish_grey"
+                android:hint="상품에대해 궁금한점을 물어보세요."
+                android:gravity="top"
+                android:background="@drawable/rect_gray_border"
+                android:padding="5dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/item_qa_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_gray_border"
+                    android:layout_marginEnd="6dp"
+                    android:text="취소하기"
+                    android:textColor="@color/brownish_grey"
+                    android:textSize="9dp"
+                    />
+                <Button
+                    android:id="@+id/item_qa_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_blue_border"
+                    android:layout_marginStart="6dp"
+                    android:text="취소하기"
+                    android:textColor="@color/brownish_grey"
+                    android:textSize="9dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/item_qa_title"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rect_blue_border" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="상품 문의하기"
+                android:textSize="13dp"
+                android:fontFamily="@font/nanumsquareb"
+                android:textColor="@color/denim_blue"
+                android:drawableStart="@drawable/qa_question_icon"
+                android:drawablePadding="5dp"/>
+        </RelativeLayout>
+    </LinearLayout>
 
     <android.support.design.widget.TabLayout
         android:layout_marginEnd="35dp"

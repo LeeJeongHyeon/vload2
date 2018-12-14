@@ -17,12 +17,12 @@
     <application
         android:name="com.igaworks.IgawDefaultApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/icon"
+        android:icon="@mipmap/vroad_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/icon"
+        android:roundIcon="@mipmap/vroad_logo"
         android:supportsRtl="true"
-        tools:replace="theme, icon, label"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="theme, icon, label">
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="vmp.company.vexmall.provider"
@@ -65,11 +65,13 @@
         <activity
             android:name=".main.OpeningActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
         <activity android:name=".signup.SignupActivity" />
         <activity android:name=".signup.SignupActivity2" />
@@ -145,16 +147,15 @@
             android:value="L0U1D8Iy9y4oo7fmp+t9XpfDmqk=×" />
 
         <activity android:name=".vendormap.GpsActivity" />
-        <activity android:name=".shoplist.ShopListActivity" >
-
-        </activity>
+        <activity android:name=".shoplist.ShopListActivity"></activity>
         <activity android:name=".shoplist.ShopDetailActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
+        <activity android:name=".purchase.PurchaseActivity"></activity>
     </application>
 
 </manifest>
