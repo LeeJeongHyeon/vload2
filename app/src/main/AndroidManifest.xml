@@ -144,6 +144,9 @@
 
         <activity android:name=".vendormap.GpsActivity" />
         <activity android:name=".shoplist.ShopListActivity" >
+
+        </activity>
+        <activity android:name=".shoplist.ShopDetailActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

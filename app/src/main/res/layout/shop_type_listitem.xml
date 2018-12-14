@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="120dp"
+    android:background="@color/white_three"
+    >
+    <RelativeLayout
+        android:id="@+id/shop_list_item_rl"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:id="@+id/shop_list_item_img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:text="[브랜드 이름] 상품의 이름이 들어갈 텍스트입니다."
+            android:id="@+id/shop_list_item_title"
+            android:fontFamily="@font/nanumsquareb"
+            android:layout_toRightOf="@id/shop_list_item_img"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="6dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9,900원"
+            android:textColor="@color/denim_blue"
+            android:textSize="13dp"
+            android:fontFamily="@font/nanumsquareb"
+            android:layout_below="@id/shop_list_item_title"
+            android:layout_marginTop="32dp"
+            android:layout_toRightOf="@id/shop_list_item_img"
+            android:layout_marginStart="6dp"
+            android:id="@+id/shop_list_item_price"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17,333원"
+            android:textSize="9dp"
+            android:textColor="@color/warm_grey"
+            android:layout_toRightOf="@id/shop_list_item_price"
+            android:layout_alignBaseline="@id/shop_list_item_price"
+            android:layout_marginStart="6dp"/>
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:background="@drawable/shop_favor_unselected"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/shop_list_favor_btn"/>
+        <TextView
+            android:id="@+id/shop_list_item_freetrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_list_item_price"
+            android:layout_toRightOf="@id/shop_list_item_img"
+            android:layout_marginTop="6dp"
+            android:textSize="9dp"
+            android:fontFamily="@font/nanumsquareb"
+            android:text="무료배송"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/warm_grey"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

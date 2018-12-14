@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".shoplist.tab_fragments.Item_Tabfrag_Review">
+    <TextView
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="35dp"
+        android:id="@+id/item_review_title"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:text="후기(0)"
+        android:textSize="13dp"
+        android:fontFamily="@font/nanumsquareb"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/white"
+        android:background="@color/denim_blue"
+        android:gravity="center"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="35dp"
+        android:id="@+id/item_review_recycler"
+        android:layout_width="match_parent"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

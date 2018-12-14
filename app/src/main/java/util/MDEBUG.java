@@ -17,7 +17,7 @@ public class MDEBUG {
             Log.d("<Debug>>>>",buildLogMsg(msg));
     }
 
-    public static String buildLogMsg(String message) {
+    private static String buildLogMsg(String message) {
 
         StackTraceElement ste = Thread.currentThread().getStackTrace()[4];
 

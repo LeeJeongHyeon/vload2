@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rect_gray_border"
+    >
+    <RelativeLayout
+        android:id="@+id/review_item_rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/review_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018.10.17"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="9dp"
+            android:textColor="@color/black_two"
+            android:textSize="9dp"
+            android:fontFamily="@font/nanumsquareb"
+            />
+        <TextView
+            android:id="@+id/review_item_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user****"
+            android:textColor="@color/black_two"
+            android:layout_toLeftOf="@id/review_item_date"
+            android:layout_alignBaseline="@id/review_item_date"
+            android:layout_marginEnd="13dp"
+            android:textSize="9dp"/>
+        <RatingBar
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_marginTop="10dp"
+            android:id="@+id/review_item_stars"
+            />
+        <TextView
+            android:id="@+id/review_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상품의 이름이 들어가는 텍스트입니다."
+            android:layout_below="@id/review_item_stars"
+            android:textSize="9dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanumsquareb"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            />
+        <TextView
+            android:id="@+id/review_more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="9dp"
+            android:textColor="@color/black_two"
+            android:drawableEnd="@drawable/review_item_expanded"
+            android:drawablePadding="5dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="6dp"
+            android:text="후기 더보기"/>
+    </RelativeLayout>
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/listitem_explayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:el_expanded="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/review_item_image"
+                android:src="@drawable/review_item_tempimage"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/review_item_subtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상품의 대한 내용이 들어갈 예정입니다. 한 줄도 가능하고
+두 줄도 가능하지만 세 줄도 가능합니다. "
+                android:layout_below="@id/review_item_image"
+                android:layout_margin="6dp"
+                />
+
+        </RelativeLayout>
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+</LinearLayout>

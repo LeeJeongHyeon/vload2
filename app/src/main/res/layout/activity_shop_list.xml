@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_drawaer_view"
     tools:context=".shoplist.ShopListActivity">
 
     <RelativeLayout
-        
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white_three">
 
         <RelativeLayout
             android:id="@+id/shop_top_toolbar"
@@ -148,8 +149,145 @@
                     />
             </RelativeLayout>
         </LinearLayout>
+        
+        <View
+            android:id="@+id/baseline1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_two"
+            android:layout_below="@id/shop_category_ll"/>
+        
+        <RelativeLayout
+            android:id="@+id/shop_subcat_rl"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/baseline1"
+            >
+            <ImageView
+                android:id="@+id/shop_album_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_shop_album"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="11dp"
+                android:paddingStart="12dp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white_two"
+                android:layout_toLeftOf="@id/shop_album_btn"
+                android:id="@+id/baseline2"/>
 
+            <ImageView
+                android:id="@+id/shop_list_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_shop_list"
+                android:layout_toLeftOf="@id/baseline2"
+                android:layout_centerVertical="true"
+                android:paddingEnd="11dp"
+                android:paddingStart="12dp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white_two"
+                android:layout_toLeftOf="@id/shop_list_btn"
+                android:id="@+id/baseline3"/>
 
+            <LinearLayout
+                android:id="@+id/shop_cat_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/baseline3"
+                android:paddingStart="17dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/shop_category_1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/shop_cat1_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/denim_blue"
+                        android:textSize="9dp"
+                        android:layout_centerInParent="true"
+                        />
+                    <View
+                        android:id="@+id/shop_cat1_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/denim_blue"
+                        android:visibility="gone"
+                        android:layout_alignParentBottom="true"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/shop_category_2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/shop_cat2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/denim_blue"
+                        android:textSize="9dp"
+                        android:layout_centerInParent="true"
+                        />
+                    <View
+                        android:id="@+id/shop_cat2_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:background="@color/denim_blue"
+                        android:layout_alignParentBottom="true"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/shop_category_3"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/shop_cat3_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/denim_blue"
+                        android:textSize="9dp"
+                        android:layout_centerInParent="true"
+                        />
+                    <View
+                        android:id="@+id/shop_cat3_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:background="@color/denim_blue"
+                        android:layout_alignParentBottom="true"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_two"
+            android:layout_below="@id/shop_subcat_rl"
+            android:id="@+id/baseline4"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/baseline4"
+            android:id="@+id/shop_list_recyclerview"
+            android:background="@color/white_three"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            android:layout_marginTop="17dp">
+            
+        </android.support.v7.widget.RecyclerView>
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView

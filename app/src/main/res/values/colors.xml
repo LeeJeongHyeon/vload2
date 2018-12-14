@@ -27,4 +27,11 @@
     <color name="brownish_grey">#666666</color>
     <color name="warm_grey">#999999</color>
     <color name="dark_sky_blue">#4aacde</color>
+    <color name="white_two">#dbdbdb</color>
+    <color name="white_three">#f1f1f1</color>
+    <color name="white_four">#fefefe</color>
+    <color name="pinkish_grey">#cccccc</color>
+    <color name="black_two">#0d0505</color>
+    <color name="black_three">#030202</color>
+    <color name="pinkish_grey_two">#bfbfbf</color>
 </resources>
