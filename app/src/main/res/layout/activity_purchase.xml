@@ -7,5 +7,26 @@
     tools:context=".purchase.PurchaseActivity">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/denim_blue"
+        android:layout_alignParentTop="true"
+        android:id="@+id/puchase_top_rl">
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_arrow"
+            android:scaleType="center"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bmjua"
+            android:textSize="24dp"
+            android:text="구매하기"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
 </RelativeLayout>

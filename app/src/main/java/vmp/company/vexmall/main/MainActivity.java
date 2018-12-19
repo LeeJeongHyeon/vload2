@@ -151,7 +151,7 @@ public class MainActivity extends NavActivity { // 네비게이션 메뉴를 사
         store = findViewById(R.id.main_store_ll);
         reserve = findViewById(R.id.main_reservation_ll);
         map = findViewById(R.id.main_map_ll);
-        main_bar_1 = findViewById(R.id.main_bar_1);
+        main_bar_0 = findViewById(R.id.main_bar_0);
         main_bar_2 = findViewById(R.id.main_bar_2);
 
 
@@ -172,7 +172,7 @@ public class MainActivity extends NavActivity { // 네비게이션 메뉴를 사
     protected void setMainListeners() {
         Log.d(TAG, "setListeners() begins to run...");
 
-        main_bar_1.setOnClickListener(new View.OnClickListener() {
+        main_bar_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 main_drawer_layout.openDrawer(main_nav_view);

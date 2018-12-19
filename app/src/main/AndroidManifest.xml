@@ -15,7 +15,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name="com.igaworks.IgawDefaultApplication"
+        android:name=".vexmall_application"
         android:allowBackup="true"
         android:icon="@mipmap/vroad_logo"
         android:label="@string/app_name"
@@ -48,7 +48,8 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".addpack.AddpackLaunchActivity" />
+        <activity android:name=".addpack.AddpackLaunchActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.kyad.adlibrary.AppAllOfferwallActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -62,26 +63,25 @@
                 <data android:scheme="AppAllOfferwall" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".main.OpeningActivity"
-            android:theme="@style/AppTheme.NoActionBar">
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-        </activity>
-        <activity android:name=".signup.SignupActivity" />
-        <activity android:name=".signup.SignupActivity2" />
-        <activity android:name=".signup.SignupActivity3" />
-        <activity android:name=".navigation.NavActivity" />
-        <activity android:name=".navigation.FindIdActivity" />
-        <activity android:name=".addpack.Addpack_Activity" />
-        <activity android:name=".setting.SettingsActivity" />
-        <activity android:name=".setting.SettingsActivity2" />
-        <activity android:name=".vendormap.VendormapAcitivity" />
+        <activity android:name=".signup.SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".signup.SignupActivity2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".signup.SignupActivity3"
+            android:screenOrientation="portrait" />
+        <activity android:name=".navigation.NavActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".navigation.FindIdActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".addpack.Addpack_Activity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".setting.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".setting.SettingsActivity2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".vendormap.VendormapAcitivity"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="tnkad_app_id"
@@ -96,10 +96,12 @@
         //앱드팝콘 엑티비티 추가
         <activity
             android:name="com.igaworks.adpopcorn.activity.ApOfferWallActivity_NT"
-            android:theme="@android:style/Theme.NoTitleBar" />
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.igaworks.adpopcorn.activity.ApVideoAdActivity"
-            android:theme="@android:style/Theme.NoTitleBar" />
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait"/>
         //수정 - 나중에 애드팝콘 리워드 서버 변경시 server -> client로 변경
         <meta-data
             android:name="igaworks_reward_server_type"
@@ -114,13 +116,15 @@
         //nas 액티비티 설정
         <activity
             android:name="com.nextapps.naswall.NASWallBrowser"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
         //tnk ad 메타데이터 설정
         <meta-data
             android:name="tnkad_app_id"
             android:value="304020e0-90d1-2636-6362-1d09080b0a03" />
         //tnk ad activity 추가
-        <activity android:name="com.tnkfactory.ad.AdWallActivity" />
+        <activity android:name="com.tnkfactory.ad.AdWallActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.tnkfactory.ad.AdMediaActivity"
             android:screenOrientation="landscape" />
@@ -133,7 +137,8 @@
             android:name="com.fpang.lib.FreePangPang"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.AdSync" />
-        <activity android:name=".navigation.LoginActivity" />
+        <activity android:name=".navigation.LoginActivity"
+            android:screenOrientation="portrait" />
         //adsync 메타데이터 설정
         <meta-data
             android:name="partner_id"
@@ -146,16 +151,39 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="L0U1D8Iy9y4oo7fmp+t9XpfDmqk=×" />
 
-        <activity android:name=".vendormap.GpsActivity" />
-        <activity android:name=".shoplist.ShopListActivity"></activity>
-        <activity android:name=".shoplist.ShopDetailActivity">
+        <activity android:name=".vendormap.GpsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".shoplist.ShopListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".shoplist.ShopDetailActivity"
+            android:screenOrientation="portrait">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".purchase.PurchaseActivity"></activity>
+        <activity android:name=".purchase.PurchaseActivity"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".main.OpeningActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

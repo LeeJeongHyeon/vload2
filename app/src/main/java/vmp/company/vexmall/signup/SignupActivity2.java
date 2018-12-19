@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,11 +36,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import util.MySingleton;
 import util.Permission;
 import util.category.LogTag;
 import util.recommender.RecVO;
 import util.recommender.StatusBar;
-import util.MySingleton;
 import vmp.company.vexmall.R;
 
 
@@ -134,6 +135,8 @@ public class SignupActivity2 extends AppCompatActivity {
         s2_1_password = findViewById(R.id.s2_1_password); // 비밀번호
         s2_2_repassword = findViewById(R.id.s2_2_repassword); // 비밀번호 확인
 
+        s2_1_password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+
         // 계정 종류
         s2_3_is_cu = findViewById(R.id.s2_3_is_cu); // 계정 종류 - 일반
         s2_4_is_vd = findViewById(R.id.s2_4_is_vd); // 계정 종류 - 판매자
@@ -190,6 +193,7 @@ public class SignupActivity2 extends AppCompatActivity {
         s2_15_zipcode.addTextChangedListener(onKey);
         s2_17_address1.addTextChangedListener(onKey);
         s2_18_address2.addTextChangedListener(onKey);
+        s2_1_password.setTransformationMethod(PasswordTransformationMethod.getInstance());
     }
 
     protected void setLinsteners() {

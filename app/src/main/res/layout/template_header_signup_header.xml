@@ -10,8 +10,9 @@ android:layout_height="wrap_content"
     style="@style/SignupHeader" />
 <FrameLayout
     android:id="@+id/s_back"
-    android:layout_width="32dp"
+    android:layout_width="40dp"
     android:layout_height="40dp"
+    android:paddingEnd="10dp"
     android:layout_centerVertical="true">
     <Button
         android:layout_width="10dp"

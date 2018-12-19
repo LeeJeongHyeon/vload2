@@ -1,15 +1,14 @@
 package vmp.company.vexmall;
 
-import android.app.Application;
-
 import com.igaworks.IgawCommon;
+import com.igaworks.IgawDefaultApplication;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class vexmall_application extends Application {
+public class vexmall_application extends IgawDefaultApplication {
     private static Retrofit retrofit = null;
 
     public Retrofit getRetrofit() {

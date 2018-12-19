@@ -3,6 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -24,13 +25,13 @@
 
             <LinearLayout
                 style="@style/SignupLinearLayoutOuter"
-                android:paddingBottom="300dp">
+
+                android:paddingBottom="100dp">
                 <!-- 비밀번호 텍스트뷰 : s2_tv1, s2_tv2(비번확인)-->
                 <EditText
+                    style="@style/SignupEditText"
                     android:id="@+id/s2_1_password"
                     android:hint="비밀번호"
-                    android:inputType="textPassword"
-                    style="@style/SignupEditText"
                     />
 
 
