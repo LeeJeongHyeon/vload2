@@ -270,13 +270,20 @@
             </RelativeLayout>
 
         </LinearLayout>
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/item_scrollup_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/item_scrollup_btn"/>
         </RelativeLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
     </android.support.design.widget.CoordinatorLayout>
-
     <RelativeLayout
         android:id="@+id/item_bottom_btn_rl"
         android:layout_width="match_parent"
@@ -304,13 +311,4 @@
             />
 
     </RelativeLayout>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/item_scrollup_icon"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="15dp"
-        android:layout_above="@id/item_bottom_btn_rl"
-        android:id="@+id/item_scrollup_btn"/>
 </RelativeLayout>

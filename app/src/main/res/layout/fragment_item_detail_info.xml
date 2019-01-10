@@ -29,7 +29,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"/>
     </RelativeLayout>
-    <util.customview.ZoomImageView
+    <util.ZoomImageView
         android:layout_below="@id/item_detail_zoomin"
         android:id="@+id/item_detail_image"
         android:layout_marginTop="20dp"

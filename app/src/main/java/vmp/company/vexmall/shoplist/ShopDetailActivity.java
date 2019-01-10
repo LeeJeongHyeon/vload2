@@ -90,11 +90,6 @@ public class ShopDetailActivity extends AppCompatActivity implements OnTabSelect
             float offset = Math.abs((float) state);
             offset /= 1000;
             itemTopTitleTv.setAlpha(offset);
-            if (offset >= 1.0f){
-                itemScrollupBtn.setVisibility(View.VISIBLE);
-            }else if (offset <= 0.3f){
-                itemScrollupBtn.setVisibility(View.GONE);
-            }
         });
 
         initUI();
