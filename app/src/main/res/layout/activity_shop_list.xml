@@ -70,84 +70,15 @@
             android:layout_below="@id/shop_top_toolbar"
             android:weightSum="6"
             android:orientation="horizontal">
-            <RelativeLayout
-                style="@style/shop_cat_btns"
-                android:id="@+id/shop_cat_all_rl">
-                <ImageView
-                    style="@style/shop_cat_btn_img"
-                    android:id="@+id/shop_cat_allimg"
-                    android:src="@drawable/shopping_bag"/>
-                <TextView
-                    style="@style/shop_cat_btn_text"
-                    android:layout_below="@id/shop_cat_allimg"
-                    android:text="전체 카테고리"
-                    />
-            </RelativeLayout>
-            <RelativeLayout
-                style="@style/shop_cat_btns"
-                android:id="@+id/shop_cat_passion_rl">
-                <ImageView
-                    style="@style/shop_cat_btn_img"
-                    android:id="@+id/shop_cat_passionimg"
-                    android:src="@drawable/vroad_shop_list_fashion"/>
-                <TextView
-                    style="@style/shop_cat_btn_text"
-                    android:layout_below="@id/shop_cat_passionimg"
-                    android:text="패션ㆍ잡화ㆍ뷰티"
-                    />
-            </RelativeLayout>
-            <RelativeLayout
-                style="@style/shop_cat_btns"
-                android:id="@+id/shop_cat_food_rl">
-                <ImageView
-                    style="@style/shop_cat_btn_img"
-                    android:id="@+id/shop_cat_foodimg"
-                    android:src="@drawable/vroad_shop_list_food"/>
-                <TextView
-                    style="@style/shop_cat_btn_text"
-                    android:layout_below="@id/shop_cat_foodimg"
-                    android:text="식품ㆍ출산ㆍ육아"
-                    />
-            </RelativeLayout>
-            <RelativeLayout
-                style="@style/shop_cat_btns"
-                android:id="@+id/shop_cat_living_rl">
-                <ImageView
-                    style="@style/shop_cat_btn_img"
-                    android:id="@+id/shop_cat_livingimg"
-                    android:src="@drawable/vroad_shop_list_living"/>
-                <TextView
-                    style="@style/shop_cat_btn_text"
-                    android:layout_below="@id/shop_cat_livingimg"
-                    android:text="생활ㆍ건강ㆍ리빙"
-                    />
-            </RelativeLayout>
-            <RelativeLayout
-                style="@style/shop_cat_btns"
-                android:id="@+id/shop_cat_digital_rl">
-                <ImageView
-                    style="@style/shop_cat_btn_img"
-                    android:id="@+id/shop_cat_digitalimg"
-                    android:src="@drawable/vroad_shop_list_digital"/>
-                <TextView
-                    style="@style/shop_cat_btn_text"
-                    android:layout_below="@id/shop_cat_digitalimg"
-                    android:text="디지털ㆍ가전ㆍ핸드폰"
-                    />
-            </RelativeLayout>
-            <RelativeLayout
-                style="@style/shop_cat_btns"
-                android:id="@+id/shop_cat_sport_rl">
-                <ImageView
-                    style="@style/shop_cat_btn_img"
-                    android:id="@+id/shop_cat_sportimg"
-                    android:src="@drawable/vroad_shop_list_sport"/>
-                <TextView
-                    style="@style/shop_cat_btn_text"
-                    android:layout_below="@id/shop_cat_sportimg"
-                    android:text="스포츠ㆍ취미ㆍ자동차"
-                    />
-            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/shop_cat_list"
+                android:background="@color/white"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:orientation="horizontal">
+
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
         
         <View
@@ -161,13 +92,13 @@
             android:id="@+id/shop_subcat_rl"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:background="@color/white"
             android:layout_below="@id/baseline1"
             >
-            <ImageView
+            <util.customview.CheckImageView
                 android:id="@+id/shop_album_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_shop_album"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:paddingEnd="11dp"
@@ -180,11 +111,10 @@
                 android:layout_toLeftOf="@id/shop_album_btn"
                 android:id="@+id/baseline2"/>
 
-            <ImageView
+            <util.customview.CheckImageView
                 android:id="@+id/shop_list_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_shop_list"
                 android:layout_toLeftOf="@id/baseline2"
                 android:layout_centerVertical="true"
                 android:paddingEnd="11dp"
@@ -197,80 +127,19 @@
                 android:layout_toLeftOf="@id/shop_list_btn"
                 android:id="@+id/baseline3"/>
 
-            <LinearLayout
-                android:id="@+id/shop_cat_ll"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <android.support.design.widget.TabLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/baseline3"
-                android:paddingStart="17dp"
-                android:orientation="horizontal">
-                <RelativeLayout
-                    android:id="@+id/shop_category_1"
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/shop_cat1_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textColor="@color/denim_blue"
-                        android:textSize="9dp"
-                        android:layout_centerInParent="true"
-                        />
-                    <View
-                        android:id="@+id/shop_cat1_indicator"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/denim_blue"
-                        android:visibility="gone"
-                        android:layout_alignParentBottom="true"
-                        />
-                </RelativeLayout>
-                <RelativeLayout
-                    android:id="@+id/shop_category_2"
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/shop_cat2_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textColor="@color/denim_blue"
-                        android:textSize="9dp"
-                        android:layout_centerInParent="true"
-                        />
-                    <View
-                        android:id="@+id/shop_cat2_indicator"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:visibility="gone"
-                        android:background="@color/denim_blue"
-                        android:layout_alignParentBottom="true"
-                        />
-                </RelativeLayout>
-                <RelativeLayout
-                    android:id="@+id/shop_category_3"
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/shop_cat3_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textColor="@color/denim_blue"
-                        android:textSize="9dp"
-                        android:layout_centerInParent="true"
-                        />
-                    <View
-                        android:id="@+id/shop_cat3_indicator"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:visibility="gone"
-                        android:background="@color/denim_blue"
-                        android:layout_alignParentBottom="true"
-                        />
-                </RelativeLayout>
-            </LinearLayout>
+                android:layout_alignParentStart="true"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/denim_blue"
+                app:tabIndicatorColor="@color/denim_blue"
+                android:paddingStart="5dp"
+                android:id="@+id/shop_subcat_tl">
+
+            </android.support.design.widget.TabLayout>
+
         </RelativeLayout>
         <View
             android:layout_width="match_parent"

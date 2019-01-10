@@ -154,7 +154,12 @@
         <activity android:name=".vendormap.GpsActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".shoplist.ShopListActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>.-->
+        </activity>
         <activity android:name=".shoplist.ShopDetailActivity"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
@@ -176,11 +181,8 @@
             android:name=".main.OpeningActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

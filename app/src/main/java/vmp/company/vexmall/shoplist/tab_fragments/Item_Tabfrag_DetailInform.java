@@ -14,7 +14,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import util.ZoomImageView;
+import util.customview.ZoomImageView;
 import vmp.company.vexmall.R;
 
 /**

@@ -12,9 +12,9 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.View;
-import android.support.v4.widget.DrawerLayout;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
@@ -46,19 +46,28 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import soft.neunge.com.library.utils.BaseCallback;
 import util.ComingSoon;
 import util.CustomImageLoad;
+import util.MDEBUG;
+import util.MySingleton;
 import util.Permission;
 import util.category.CategoryVO;
-import util.category.LogTag;
-import util.recommender.StatusBar;
 import util.category.GridAdapter;
-import vmp.company.vexmall.navigation.InviteDialog;
-import util.MySingleton;
+import util.category.LogTag;
+import util.data.MainCategory;
+import util.data.ShopCategory;
+import util.recommender.StatusBar;
 import vmp.company.vexmall.R;
+import vmp.company.vexmall.api.ShopAPI;
+import vmp.company.vexmall.navigation.InviteDialog;
 import vmp.company.vexmall.navigation.NavActivity;
+import vmp.company.vexmall.shoplist.ShopListActivity;
 import vmp.company.vexmall.signup.SignupActivity;
 import vmp.company.vexmall.vendormap.GpsActivity;
+import vmp.company.vexmall.vexmall_application;
+
+import static util.Property.SHOPLIST_CAT_EXTRANAME;
 
 
 public class MainActivity extends NavActivity { // 네비게이션 메뉴를 사용하는 모든 액티비티는 NavActivity를 상속 받는다.
@@ -187,7 +196,11 @@ public class MainActivity extends NavActivity { // 네비게이션 메뉴를 사
         });
         // TODO : 나머지 리스너 향후 추가
 
-        store.setOnClickListener(ComingSoon.comingSoonListener(this));
+        store.setOnClickListener(v->{
+            Intent inte = new Intent(MainActivity.this,ShopListActivity.class);
+            startActivity(inte);
+        });
+
         reserve.setOnClickListener(ComingSoon.comingSoonListener(this));
         map.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -204,7 +217,11 @@ public class MainActivity extends NavActivity { // 네비게이션 메뉴를 사
         ll_category.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this, "준비 중입니다.", Toast.LENGTH_SHORT).show();
+                String ca_id = (String)view.getTag();
+                MDEBUG.debug(ca_id + " is it?");
+                Intent inte = new Intent(MainActivity.this,ShopListActivity.class);
+                inte.putExtra(SHOPLIST_CAT_EXTRANAME,ca_id);
+                startActivity(inte);
             }
         });
 
@@ -213,46 +230,69 @@ public class MainActivity extends NavActivity { // 네비게이션 메뉴를 사
 
     // 동적 카테고리 생성
     public void getIconUrls() {
-        String url = CATEGORY_URL;
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
+        ArrayList<CategoryVO> categoryVOS = new ArrayList<>();
+        ((vexmall_application)getApplication()).getRetrofit().create(ShopAPI.class).getCategories().
+                enqueue(new BaseCallback<MainCategory>(this, (call,res)->{
 
-                        try {
-                            JSONArray obj = new JSONArray(response);
-                            ArrayList<CategoryVO> categoryArr = new ArrayList<>();
+                    for (int i = 0; i < ll_category.getNumColumns() * 2; i++) {
+                        ShopCategory shop = null;
 
-                            for (int i = 0; i < ll_category.getNumColumns() * 2; i++) {
-
-                                if (i >= obj.length()) {
-                                    CategoryVO vo = new CategoryVO("", "");
-                                    categoryArr.add(vo);
-                                    continue;
-                                }
-
-                                CategoryVO vo = new CategoryVO(obj.getJSONObject(i).getString("imagePath"), obj.getJSONObject(i).getString("ca_name"));
-                                categoryArr.add(vo);
-                            }
-
-                            ll_category.setAdapter(new GridAdapter(MainActivity.this, R.layout.category_input_frame, categoryArr));
-                            int expandSpec = View.MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, View.MeasureSpec.AT_MOST);
-                            ll_category.measure(0, expandSpec);
-                            ll_category.getLayoutParams().height = ll_category.getMeasuredHeight();
-                        } catch (Exception e) {
-                            e.printStackTrace();
+                        if (i >= res.body().categories.size()) {
+                            CategoryVO vo = new CategoryVO("", "","");
+                            categoryVOS.add(vo);
+                            continue;
+                        }else{
+                            shop = res.body().categories.get(i);
                         }
+                        categoryVOS.add(new CategoryVO(shop.imagePath,shop.ca_name,shop.ca_id));
                     }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                    }
-                }
-        );
 
-        stringRequest.setTag(TAG);
-        MySingleton.getInstance(MainActivity.this).addToRequestQueue(stringRequest);
+                    ll_category.setAdapter(new GridAdapter(MainActivity.this, R.layout.category_input_frame, categoryVOS));
+                    int expandSpec = View.MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, View.MeasureSpec.AT_MOST);
+                    ll_category.measure(0, expandSpec);
+                    ll_category.getLayoutParams().height = ll_category.getMeasuredHeight();
+                }));
+
+//        String url = CATEGORY_URL;
+//        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+//                new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//
+//                        try {
+//                            JSONArray obj = new JSONArray(response);
+//                            ArrayList<CategoryVO> categoryArr = new ArrayList<>();
+//
+//                            for (int i = 0; i < ll_category.getNumColumns() * 2; i++) {
+//
+//                                if (i >= obj.length()) {
+//                                    CategoryVO vo = new CategoryVO("", "");
+//                                    categoryArr.add(vo);
+//                                    continue;
+//                                }
+//
+//                                CategoryVO vo = new CategoryVO(obj.getJSONObject(i).getString("imagePath"), obj.getJSONObject(i).getString("ca_name"));
+//                                categoryArr.add(vo);
+//                            }
+//
+//                            ll_category.setAdapter(new GridAdapter(MainActivity.this, R.layout.category_input_frame, categoryArr));
+//                            int expandSpec = View.MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, View.MeasureSpec.AT_MOST);
+//                            ll_category.measure(0, expandSpec);
+//                            ll_category.getLayoutParams().height = ll_category.getMeasuredHeight();
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                },
+//                new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError error) {
+//                    }
+//                }
+//        );
+//
+//        stringRequest.setTag(TAG);
+//        MySingleton.getInstance(MainActivity.this).addToRequestQueue(stringRequest);
     }
 
     public void getBannerUrls(final String type) {

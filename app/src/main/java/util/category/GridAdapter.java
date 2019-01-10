@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import util.category.CategoryVO;
-import util.category.ImageAsync;
 import vmp.company.vexmall.R;
 
 public class GridAdapter extends ArrayAdapter {
@@ -43,7 +41,7 @@ public class GridAdapter extends ArrayAdapter {
             ca_name.setVisibility(View.VISIBLE);
         }
         ca_name.setText( list.get(position).getCa_name() );
-
+        convertView.setTag(list.get(position).getCa_id());
         ImageAsync task = new ImageAsync(context, list.get(position), ca_icon);
         task.execute();
 

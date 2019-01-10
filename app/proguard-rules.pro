@@ -19,3 +19,5 @@
 # If you keep the nav_line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+-keep public class * { public protected *; }
+-keep class  util.data.**
